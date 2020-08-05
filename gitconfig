@@ -7,6 +7,7 @@
 [user]
 	name = Alfonso
 	email = alfonso@turo.com
+	signingkey = 7328CBDF64F31623
 [color]
     branch = auto
     diff = auto
@@ -150,3 +151,7 @@
 	autosquash = true
 [diff]
 	renameLimit = 3305
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg
