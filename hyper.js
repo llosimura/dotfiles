@@ -22,7 +22,6 @@ module.exports = {
     "hyperterm-summon",
     "hypercwd",
     "hyperlinks",
-    "hyper-statusline",
     "hyper-search",
   ],
   localPlugins: [],
