@@ -21,3 +21,5 @@
       glob: true
       path: bin/*
       relink: true
+    ~/.config/spotifyd/spotifyd.conf:
+      path: spotifyd.conf

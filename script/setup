@@ -5,3 +5,5 @@ set -e
 script/bootstrap
 
 ./install
+
+brew services start spotifyd
