@@ -1,11 +1,11 @@
 [core]
-	excludesfile = /Users/llosimura/.gitignore_global
-	pager = diff-so-fancy | less --tabs=4 -RFX
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
+	excludesfile = /Users/alfonso/.gitignore_global
+	pager = delta
+[delta]
+    line-numbers = true
+    side-by-side = true
 [user]
-	name = Alfonso
+	name = llosimura
 	email = alfonso@turo.com
 	signingkey = 7328CBDF64F31623
 [color]
@@ -137,21 +137,21 @@
 	enabled = 1
 [push]
 	default = upstream
-[color "diff-highlight"]
-	oldNormal = red bold
-	oldHighlight = red bold 52
-	newNormal = green bold
-	newHighlight = green bold 22
-[mergetool "p4mergetool"]
-	cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge $PWD/$BASE $PWD/$REMOTE $PWD/$LOCAL $PWD/$MERGED
-	trustExitCode = false
 [mergetool]
 	keepBackup = false
 [rebase]
 	autosquash = true
 [diff]
+    colorMoved = default
 	renameLimit = 3305
 [commit]
 	gpgsign = true
+	template = /Users/alfonso/.stCommitMsg
 [gpg]
 	program = gpg
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

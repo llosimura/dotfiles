@@ -13,7 +13,7 @@ export CLICOLOR='Yes'
 export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
 
 # GO configuration
-GOPATH=$HOME/go
+export GOPATH=$HOME/go
 
 # Path configuration
 export PATH="$HOME/.local/bin:$HOME/.yarn/bin:$HOME/bin:$HOME/.jenv/bin:/usr/local/go/bin:$GOPATH/bin:$HOME/flutter/bin:$PATH"
@@ -27,12 +27,9 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 # Configure FZF
-
 # Do not use full screen mode
 export FZF_DEFAULT_OPTS='--height 50% --reverse'
 # Use ripgrep instead of grep
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 
-# Configure AWS
 
-export AWS_REGION=us-east-1

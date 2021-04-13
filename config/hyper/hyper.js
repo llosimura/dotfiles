@@ -1,12 +1,12 @@
 module.exports = {
   config: {
+  	modifierKeys: {
+  		altIsMeta: true
+  	},
     fontSize: 14,
-    fontFamily:
-      'MesloLGS NF, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
-    cursorColor: "rgba(248,28,229,0.8)",
+    fontFamily:'MesloLGS NF, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+    padding: "15px",
     cursorShape: "BLOCK",
-    borderColor: "#333",
-    padding: "12px 14px",
     shell: "/bin/zsh",
     shellArgs: ["--login"],
     env: {},
@@ -17,8 +17,7 @@ module.exports = {
     },
   },
   plugins: [
-    "hyper-nord",
-    // "hyper-one-light",
+    "hyper-gruvbox",
     "hyperterm-summon",
     "hypercwd",
     "hyperlinks",
