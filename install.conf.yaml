@@ -3,23 +3,34 @@
       create: true
       relink: true
 
-- clean: ['~']
+- clean: [ '~' ]
 
 - link:
-    ~/.bash_profile:
-    ~/.bashrc:
     ~/.gitconfig:
+      path: config/git/gitconfig
     ~/.gitignore_global:
+      path: config/git/gitignore_global
     ~/.hyper.js:
-    ~/.p10k.zsh:
-    ~/.shell:
+      path: config/hyper/hyper.js
     ~/.tmux.conf:
-    ~/.tmux.conf.local:
-    ~/.vimrc:
+      path: config/tmux/tmux.conf
+    ~/.bash_profile:
+      path: config/shells/bash/bash_profile
+    ~/.bashrc:
+      path: config/shells/bash/bashrc
+    ~/.config/bash:
+      path: config/shells/bash/config
     ~/.zshrc:
+      path: config/shells/zsh/zshrc
+    ~/.config/zsh:
+      path: config/shells/zsh/config
+    ~/.config/nvim:
+      path: config/nvim
+    ~/.config/spotifyd/spotifyd.conf:
+      path: config/spotify/spotifyd.conf
     ~/bin/:
       glob: true
-      path: bin/*
+      path: config/bin/*
       relink: true
-    ~/.config/spotifyd/spotifyd.conf:
-      path: spotifyd.conf
+
+

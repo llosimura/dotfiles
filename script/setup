@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
-
 set -e
-
 script/bootstrap
-
-./install
-
-brew services start spotifyd
+script/install
+# brew services start spotifyd
