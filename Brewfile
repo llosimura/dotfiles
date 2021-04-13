@@ -1,6 +1,6 @@
 brew "zsh"
 brew "hub"
-brew "diff-so-fancy"
+brew "git-delta"
 brew "jenv"
 brew "pyenv"
 brew "tmux"
