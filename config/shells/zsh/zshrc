@@ -11,9 +11,9 @@ source $ZSH/oh-my-zsh.sh
 # I like menus
 zstyle ':completion:*' menu select
 
+[[ ! -f ~/.config/bash/settings.sh ]] || source ~/.config/bash/settings.sh
 [[ ! -f ~/.config/bash/aliases.sh ]] || source ~/.config/bash/aliases.sh
 [[ ! -f ~/.config/bash/functions.sh ]] || source ~/.config/bash/functions.sh
-[[ ! -f ~/.config/bash/settings.sh ]] || source ~/.config/bash/settings.sh
 [[ ! -f ~/.config/zsh/zplug.zsh ]] || source ~/.config/zsh/zplug.zsh
 [[ ! -f ~/.config/zsh/p10k.zsh ]] || source ~/.config/zsh/p10k.zsh
 [[ ! -f ~/.config/zsh/fzf.zsh ]] || source ~/.config/zsh/fzf.zsh

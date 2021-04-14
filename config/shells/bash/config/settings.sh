@@ -1,5 +1,11 @@
 # Default editor
-export EDITOR=vim
+# Use neovim as EDITOR present
+if type nvim > /dev/null 2>&1;
+then
+  export EDITOR=nvim
+else
+  export EDITOR=vim
+fi
 
 # Ant configuration
 export ANT_OPTS='-Xms768m -Xmx1024m'

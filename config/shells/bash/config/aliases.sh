@@ -4,11 +4,9 @@ alias dant='ANT_OPTS="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,a
 # Alias Hub to get a better Github integration
 alias git=hub
 
-# Use neovim if present
-if type nvim > /dev/null 2>&1; then
-  alias vim='nvim'
-  alias vi='nvim'
-fi
+# Alias vim to our default editor (neovim)
+alias vim='${EDITOR:-vim}'
+alias vi='${EDITOR:-vim}'
 
 # Some better aliases
 alias cp='cp -iv'
