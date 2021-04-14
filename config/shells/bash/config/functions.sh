@@ -36,3 +36,6 @@ ii() {
   echo
 }
 
+# Add the fuck function
+eval "$(thefuck --alias)"
+
