@@ -30,6 +30,7 @@
     changed = green
     untracked = cyan
 [alias]
+    a = add
     bn = branch-name
     br = branch
     branch-name = "!git rev-parse --abbrev-ref HEAD"
