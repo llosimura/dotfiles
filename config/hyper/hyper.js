@@ -1,11 +1,12 @@
 module.exports = {
   config: {
+  	updateChannel: "stable",
   	modifierKeys: {
   		altIsMeta: true
   	},
+  	webGLRenderer: false,
     fontSize: 14,
-    fontFamily:'MesloLGS NF, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
-    padding: "15px",
+    fontFamily: 'MesloLGS NF',
     cursorShape: "BLOCK",
     shell: "/bin/zsh",
     shellArgs: ["--login"],
@@ -17,7 +18,7 @@ module.exports = {
     },
   },
   plugins: [
-    "hyper-gruvbox",
+    "hyper-dracula",
     "hyperterm-summon",
     "hypercwd",
     "hyperlinks",
