@@ -1,11 +1,7 @@
 let g:mapleader = "\<Space>"
 
+syntax on
 set relativenumber
-":augroup numbertoggle
-":	autocmd!
-":	autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-":	autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-":augroup END
 set splitbelow
 set splitright
 set guicursor=

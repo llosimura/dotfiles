@@ -1,19 +1,16 @@
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'gruvbox-community/gruvbox'
-Plug 'itchyny/lightline.vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
-
-lua <<EOF
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = {"java"}, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-  ignore_install = { "javascript" }, -- List of parsers to ignore installing
-  highlight = {
-    enable = true,              -- false will disable the whole extension
-    disable = { "c", "rust" },  -- list of language that will be disabled
-  },
-}
-EOF
+source $HOME/.config/nvim/vim-plug/dracula/dracula.vim
+source $HOME/.config/nvim/vim-plug/airline/airline.vim
+:luafile $HOME/.config/nvim/vim-plug/treesitter/treesitter.lua
