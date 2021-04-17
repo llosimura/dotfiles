@@ -1,4 +1,2 @@
-source ~/.config/bash/settings.sh
-source ~/.config/bash/aliases.sh
-source ~/.config/bash/functions.sh
-source ~/.config/bash/fzf.sh
+source ~/.config/shells/common/common.sh
+source ~/.config/shells/bash/config/fzf.sh

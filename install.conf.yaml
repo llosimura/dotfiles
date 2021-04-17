@@ -18,12 +18,10 @@
       path: config/shells/bash/bash_profile
     ~/.bashrc:
       path: config/shells/bash/bashrc
-    ~/.config/bash:
-      path: config/shells/bash/config
     ~/.zshrc:
       path: config/shells/zsh/zshrc
-    ~/.config/zsh:
-      path: config/shells/zsh/config
+    ~/.config/shells:
+      path: config/shells
     ~/.config/nvim:
       path: config/nvim
     ~/.config/spotifyd/spotifyd.conf:
