@@ -4,7 +4,7 @@ module.exports = {
   	modifierKeys: {
   		altIsMeta: true
   	},
-  	webGLRenderer: false,
+  	webGLRenderer: true,
     fontSize: 14,
     fontFamily: 'MesloLGS NF',
     cursorShape: "BLOCK",
