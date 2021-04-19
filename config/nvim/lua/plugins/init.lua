@@ -1,0 +1,14 @@
+local cmd = vim.cmd
+cmd 'packadd paq-nvim'
+local paq = require('paq-nvim').paq
+
+paq { 'dracula/vim', as = 'dracula' }
+paq { 'nvim-lua/plenary.nvim' }
+paq { 'nvim-lua/popup.nvim' }
+paq { 'nvim-telescope/telescope.nvim' }
+paq { 'nvim-treesitter/nvim-treesitter' }
+paq { 'vim-airline/vim-airline' }
+paq { 'vim-airline/vim-airline-themes' }
+paq { 'tpope/vim-fugitive' }
+paq { 'kyazdani42/nvim-web-devicons' }
+
