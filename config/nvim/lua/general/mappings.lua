@@ -20,10 +20,6 @@ map('n', '<C-j>',  '<C-w>j', options)
 map('n', '<C-k>',  '<C-w>k', options)
 map('n', '<C-l>',  '<C-w>l', options)
 
--- TAB to move between buffers
-map('n', '<TAB>',  ':bnext <CR>', options)
-map('n', '<S-TAB>',  ':bprevious <CR>', options)
-
 -- Telescope command-line sugar
 map('n', '<leader>ff',  '<cmd>Telescope find_files<CR>', options)
 map('n', '<leader>fg',  '<cmd>Telescope live_grep<CR>', options)
@@ -43,9 +39,3 @@ map('i', 'up>', '<nop>', options)
 map('i', '<down>', '<nop>', options)
 map('i', '<left>', '<nop>', options)
 map('i', '<right>', '<nop>', options)
-
--- Automatically add closing ( { [ ' " `
-map('i', '{<cr>','{<cr>}<ESC>kA<CR>', options)
-map('i', '{' , '{}<ESC>i', options)
-map('i', '(' , '()<ESC>i', options)
-map('i', '[' , '[]<ESC>i', options)

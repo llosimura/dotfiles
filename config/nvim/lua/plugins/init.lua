@@ -11,4 +11,7 @@ paq { 'vim-airline/vim-airline' }
 paq { 'vim-airline/vim-airline-themes' }
 paq { 'tpope/vim-fugitive' }
 paq { 'kyazdani42/nvim-web-devicons' }
+paq { 'neovim/nvim-lspconfig' }
+paq { 'kabouzeid/nvim-lspinstall' }
+paq { 'nvim-lua/completion-nvim' }
 

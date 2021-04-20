@@ -12,6 +12,7 @@ o.incsearch = true
 o.hlsearch = false
 o.hidden = true
 o.scrolloff=8
+o.completeopt="menuone,noinsert,noselect"
 -- Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable delays and poor user experience.
 o.updatetime = 50
 
