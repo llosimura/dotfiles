@@ -13,9 +13,19 @@
     line-numbers-right-format = "{np:^4}" 
     syntax-theme = gruvbox-dark
 [user]
-	name = llosimura
+	name = alfonso gonzalez
 	email = alfonso@turo.com
-	signingkey = 7328CBDF64F31623
+	signingkey = DE7A933B6BC1E264C063ED38127885027E53CBCC
+[credential "https://github.com"]
+	helper =
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[url "https://github.com/"]
+	insteadOf = git@github.com:
+[init]
+	templatedir = /Users/alfonsogonzalez/.git-template
 [color]
     branch = auto
     diff = auto
@@ -64,6 +74,5 @@
 	renameLimit = 3305
 [commit]
 	gpgsign = true
-	template = /Users/alfonso/.stCommitMsg
 [gpg]
 	program = gpg

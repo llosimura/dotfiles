@@ -6,12 +6,12 @@
 - clean: [ '~' ]
 
 - link:
+    ~/.gnupg/gpg-agent.conf:
+      path: config/gnupg/pgp-agent.conf
     ~/.gitconfig:
       path: config/git/gitconfig
     ~/.gitignore_global:
       path: config/git/gitignore_global
-    ~/.hyper.js:
-      path: config/hyper/hyper.js
     ~/.tmux.conf:
       path: config/tmux/tmux.conf
     ~/.bash_profile:
