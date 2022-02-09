@@ -5,5 +5,5 @@ require('general.colors')
 
 require('plugins')
 require('plugins/airline')
-require('plugins/treesitter')
-require('plugins/lsp')
+-- require('plugins/treesitter')
+-- require('plugins/lsp')

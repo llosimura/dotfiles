@@ -1,17 +1,15 @@
-local cmd = vim.cmd
-cmd 'packadd paq-nvim'
-local paq = require('paq-nvim').paq
-
-paq { 'dracula/vim', as = 'dracula' }
-paq { 'nvim-lua/plenary.nvim' }
-paq { 'nvim-lua/popup.nvim' }
-paq { 'nvim-telescope/telescope.nvim' }
-paq { 'nvim-treesitter/nvim-treesitter' }
-paq { 'vim-airline/vim-airline' }
-paq { 'vim-airline/vim-airline-themes' }
-paq { 'tpope/vim-fugitive' }
-paq { 'kyazdani42/nvim-web-devicons' }
-paq { 'neovim/nvim-lspconfig' }
-paq { 'kabouzeid/nvim-lspinstall' }
-paq { 'nvim-lua/completion-nvim' }
-
+require "paq" {
+    "savq/paq-nvim";                  -- Let Paq manage itself
+    {"dracula/vim", as = "dracula"};
+    "nvim-lua/plenary.nvim";
+    "nvim-lua/popup.nvim";
+    "nvim-telescope/telescope.nvim";
+    "nvim-treesitter/nvim-treesitter";
+    "vim-airline/vim-airline";
+    "vim-airline/vim-airline-themes";
+    "tpope/vim-fugitive";
+    "kyazdani42/nvim-web-devicons";
+    "neovim/nvim-lspconfig";
+    "kabouzeid/nvim-lspinstall";
+    "nvim-lua/completion-nvim";
+}
