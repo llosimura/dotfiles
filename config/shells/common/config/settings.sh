@@ -30,5 +30,9 @@ export FZF_DEFAULT_OPTS='--height 50% --reverse'
 # Use ripgrep instead of grep
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 
-## Configure
+## Configure PGP signing
 export GPG_TTY=$(tty)
+
+# Configure SDK man
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

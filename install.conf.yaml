@@ -6,6 +6,8 @@
 - clean: [ '~' ]
 
 - link:
+    ~/.sdkman/etc/config:
+      path: config/sdkman/config
     ~/.gnupg/gpg-agent.conf:
       path: config/gnupg/pgp-agent.conf
     ~/.gitconfig:
