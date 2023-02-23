@@ -1,10 +1,13 @@
 [core]
-	excludesfile = /Users/alfonso/.gitignore_global
+	excludesfile = /Users/alfonsogonzalez/.gitignore_global
 	pager = delta
 [delta]
     features = navigate gruvbox
     line-numbers = true
     side-by-side = true
+    navigate = true
+[interactive]
+    diffFilter = delta --color-only --features=interactive
 [delta "gruvbox"]
     commit-decoration-style = bold box ul
     dark = true
@@ -17,14 +20,15 @@
 	email = alfonso@turo.com
 	signingkey = DE7A933B6BC1E264C063ED38127885027E53CBCC
 [credential "https://github.com"]
-	helper =
+	helper = 
 	helper = !/opt/homebrew/bin/gh auth git-credential
 [credential "https://gist.github.com"]
-	helper =
+	helper = 
 	helper = !/opt/homebrew/bin/gh auth git-credential
 [url "https://github.com/"]
 	insteadOf = git@github.com:
 [init]
+    defaultBranch = main
 	templatedir = /Users/alfonsogonzalez/.git-template
 [color]
     branch = auto
@@ -62,7 +66,11 @@
 [merge]
 	conflictstyle = diff3
 [rerere]
-	enabled = 1
+	enabled = true
+[pull]
+    rebase = true
+[fetch]
+    prune = true
 [push]
 	default = upstream
 [mergetool]
@@ -71,8 +79,14 @@
 	autosquash = true
 [diff]
     colorMoved = default
-	renameLimit = 3305
 [commit]
 	gpgsign = true
+	template = /Users/alfonsogonzalez/.stCommitMsg
 [gpg]
 	program = gpg
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

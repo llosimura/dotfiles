@@ -1,23 +1,8 @@
-# Alias for ant with debugging enabled
-alias dant='ANT_OPTS="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005 -Xms768m -Xmx1024m -XX:PermSize=256m -XX:MaxPermSize=256m" ant'
-
-# Alias Hub to get a better Github integration
-alias git=hub
-
-# Alias vim to our default editor (neovim)
-alias vim='${EDITOR:-vim}'
-alias vi='${EDITOR:-vim}'
-
 # Some better aliases
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias mkdir='mkdir -pv'
-alias ls='ls -GFh'
-alias ll='ls -FGlAhp'
 alias less='less -FSRXc'
-
-# Full recursive directory listing
-alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'' | less'
 
 # Navigation aliases
 alias cd..='cd ../'
@@ -43,3 +28,26 @@ if [ -f ~/.local_shell_aliases ]; then
     source ~/.local_shell_aliases
 fi
 
+
+# Use exa instead of ls if present
+if command -v exa &> /dev/null
+then
+  alias l='exa -lh --group-directories-first --color=auto --git --icons --no-permissions --no-user'
+  alias ll='exa -lahF --group-directories-first --color=auto --git --icons'
+else
+  alias ls='ls -GFh'
+  alias ll='ls -FGlAhp'
+fi
+
+# Use bat instead of cat if present
+if command -v bat &> /dev/null
+then
+  alias cat='bat'
+fi
+
+# Alias vi & vim to neovim
+if command -v nvim &> /dev/null
+then
+  alias vi='nvim'
+  alias vim='nvim'
+fi

@@ -12,4 +12,5 @@ require "paq" {
     "neovim/nvim-lspconfig";
     "kabouzeid/nvim-lspinstall";
     "nvim-lua/completion-nvim";
+    "github/copilot.vim";
 }
