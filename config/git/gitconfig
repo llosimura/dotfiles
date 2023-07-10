@@ -1,6 +1,7 @@
 [core]
 	excludesfile = /Users/alfonsogonzalez/.gitignore_global
 	pager = delta
+	autocrlf = input
 [delta]
     features = navigate gruvbox
     line-numbers = true

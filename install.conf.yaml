@@ -25,7 +25,7 @@
     ~/.config/shells:
       path: config/shells
     ~/.config/nvim:
-      path: config/nvim
+      path: config/astrovim
     ~/.config/spotifyd/spotifyd.conf:
       path: config/spotify/spotifyd.conf
     ~/bin/:
