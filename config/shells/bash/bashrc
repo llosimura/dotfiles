@@ -1,3 +1,2 @@
 source ~/.config/shells/common/common.sh
-source ~/.config/shells/bash/config/fzf.sh
-source /Users/alfonsogonzalez/.docker/init-bash.sh || true # Added by Docker Desktop
+source ~/.config/shells/bash/config/fzf.bash

@@ -51,3 +51,6 @@ then
   alias vi='nvim'
   alias vim='nvim'
 fi
+
+# Use tmuxinator as mux
+alias mux='tmuxinator'

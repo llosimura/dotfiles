@@ -14,12 +14,23 @@ export DISABLE_AUTO_TITLE='true'
 export ZSH=~/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
-# I like menus
-zstyle ':completion:*' menu select
+# Load completions added by homebrew
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+autoload -Uz compinit && compinit
+
+# Style completions
+#disable sort when completing `git checkout`
+zstyle ':completion:*:git-checkout:*' sort false
+# set descriptions format to enable group support
+zstyle ':completion:*:descriptions' format '[%d]'
+# set list-colors to enable filename colorizing
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+# preview directory's content with exa when completing cd
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
+# switch group using `,` and `.`
+zstyle ':fzf-tab:*' switch-group ',' '.'
 
 [[ ! -f ~/.config/shells/common/common.sh ]] || source ~/.config/shells/common/common.sh
-[[ ! -f ~/.config/shells/zsh/config/zplug.zsh ]] || source ~/.config/shells/zsh/config/zplug.zsh
+[[ ! -f ~/.config/shells/`zsh`/config/zplug.zsh ]] || source ~/.config/shells/zsh/config/zplug.zsh
 [[ ! -f ~/.config/shells/zsh/config/p10k.zsh ]] || source ~/.config/shells/zsh/config/p10k.zsh
 [[ ! -f ~/.config/shells/zsh/config/fzf.zsh ]] || source ~/.config/shells/zsh/config/fzf.zsh
-
-source /Users/alfonsogonzalez/.docker/init-zsh.sh || true # Added by Docker Desktop

@@ -31,7 +31,3 @@ fi
 
 # Then, source plugins and add commands to $PATH
 zplug load
-
-# Load the completions
-autoload -Uz compinit && compinit
-

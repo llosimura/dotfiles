@@ -20,8 +20,9 @@ extract () {
     fi
 }
 
-# Find the pid of a process the process can be a regex (findPid '/d$/')
-findPid () { lsof -t -c "$@" ; }
+# Find the pid of a process listening in the given port
+port () { lsof -i :"$@" ; }
+
 
 # Display useful host related information
 ii() {
