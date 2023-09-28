@@ -24,8 +24,8 @@
       path: config/shells/zsh/zshrc
     ~/.config/shells:
       path: config/shells
-    ~/.config/nvim:
-      path: config/astrovim
+    ~/.config/nvim/lua/user:
+      path: config/astrovim_user
     ~/.config/spotifyd/spotifyd.conf:
       path: config/spotify/spotifyd.conf
     ~/bin/:
