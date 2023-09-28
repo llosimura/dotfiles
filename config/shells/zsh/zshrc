@@ -31,6 +31,6 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
 zstyle ':fzf-tab:*' switch-group ',' '.'
 
 [[ ! -f ~/.config/shells/common/common.sh ]] || source ~/.config/shells/common/common.sh
-[[ ! -f ~/.config/shells/`zsh`/config/zplug.zsh ]] || source ~/.config/shells/zsh/config/zplug.zsh
+[[ ! -f ~/.config/shells/zsh/config/zplug.zsh ]] || source ~/.config/shells/zsh/config/zplug.zsh
 [[ ! -f ~/.config/shells/zsh/config/p10k.zsh ]] || source ~/.config/shells/zsh/config/p10k.zsh
 [[ ! -f ~/.config/shells/zsh/config/fzf.zsh ]] || source ~/.config/shells/zsh/config/fzf.zsh

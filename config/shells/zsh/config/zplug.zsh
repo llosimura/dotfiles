@@ -1,6 +1,9 @@
 source ~/.zplug/init.zsh
 
 # Load theme
+#zplug mafredri/zsh-async, from:github
+#zplug sindresorhus/pure, use:pure.zsh, from:github, as:theme
+#zplug "spaceship-prompt/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
 zplug romkatv/powerlevel10k, as:theme
 
 # Plugins
