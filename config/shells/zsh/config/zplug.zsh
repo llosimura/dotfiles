@@ -19,7 +19,7 @@ zplug plugins/macos, from:oh-my-zsh
 zplug plugins/z, from:oh-my-zsh
 zplug plugins/vi-mode, from:oh-my-zsh
 zplug plugins/terraform, from:oh-my-zsh
-zplug lukechilds/zsh-nvm
+# zplug lukechilds/zsh-nvm
 zplug zsh-users/zsh-syntax-highlighting
 zplug zsh-users/zsh-autosuggestions
 zplug zsh-users/zsh-completions
