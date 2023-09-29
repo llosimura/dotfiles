@@ -2,7 +2,7 @@ tap "homebrew/cask-fonts"
 
 brew "awscli"
 brew "bat"
-brew "exa"
+brew "eza"
 brew "fd"
 brew "fzf"
 brew "gh"

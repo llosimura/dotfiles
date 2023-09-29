@@ -29,11 +29,11 @@ if [ -f ~/.local_shell_aliases ]; then
 fi
 
 
-# Use exa instead of ls if present
-if command -v exa &> /dev/null
+# Use eza instead of ls if present
+if command -v eza &> /dev/null
 then
-  alias l='exa -lh --group-directories-first --color=auto --git --icons --no-permissions --no-user'
-  alias ll='exa -lahF --group-directories-first --color=auto --git --icons'
+  alias l='eza -lh --group-directories-first --color=auto --git --icons --no-permissions --no-user'
+  alias ll='eza -lahF --group-directories-first --color=auto --git --icons'
 else
   alias ls='ls -GFh'
   alias ll='ls -FGlAhp'
