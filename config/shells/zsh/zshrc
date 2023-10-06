@@ -10,6 +10,9 @@ DISABLE_MAGIC_FUNCTIONS=true
 # TMUX config
 export DISABLE_AUTO_TITLE='true'
 
+# Turn off autocomplete beeps
+unsetopt LIST_BEEP
+
 # Load oh my zsh
 export ZSH=~/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
@@ -25,8 +28,8 @@ zstyle ':completion:*:git-checkout:*' sort false
 zstyle ':completion:*:descriptions' format '[%d]'
 # set list-colors to enable filename colorizing
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-# preview directory's content with eza when completing cd
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
+# use popoup menu when running in tmux
+zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
 # switch group using `,` and `.`
 zstyle ':fzf-tab:*' switch-group ',' '.'
 
