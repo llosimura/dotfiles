@@ -15,6 +15,8 @@ export LS_OPTIONS='--color=auto'
 export CLICOLOR='Yes'
 export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
 
+export AWS_PAGER=""
+
 # Configure FZF
 # Do not use full screen mode
 export FZF_DEFAULT_OPTS='--height 50% --reverse'
