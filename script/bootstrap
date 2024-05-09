@@ -54,14 +54,6 @@ if [ ! -d "$ZPLUG" ]; then
   curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 fi
 
-# Install vim-plug if not there
-VIM_PLUG=~/.vim/autoload/plug.vim
-if [ ! -f "$VIM_PLUG" ]; then
-  echo -e "🛠   Installing vim-plug…"
-  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-fi
-
 # Install tpm if not there
 TPM=~/.tmux/plugins/tpm
 if [ ! -d "$TPM" ]; then

@@ -1,6 +1,7 @@
 tap "homebrew/cask-fonts"
 
 brew "awscli"
+brew "chezmoi"
 brew "bat"
 brew "eza"
 brew "fd"
