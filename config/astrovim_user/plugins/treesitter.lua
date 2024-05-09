@@ -5,5 +5,12 @@ return {
     opts.ensure_installed = require("astronvim.utils").list_insert_unique(opts.ensure_installed, {
       -- "lua"
     })
+    opts.incremental_selection = {
+      enable = true,
+      keymaps = {
+        node_incremental = "v",
+        node_decremental = "V",
+      },
+    }
   end,
 }
