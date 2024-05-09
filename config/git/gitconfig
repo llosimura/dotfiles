@@ -70,6 +70,7 @@
 	keepBackup = false
 [rebase]
 	autosquash = true
+	updateRefs = true
 [diff]
     colorMoved = default
 [commit]
