@@ -1,0 +1,11 @@
+# Include exports
+# shellcheck disable=SC1090
+[[ ! -f ~/.config/zsh/settings.sh ]] || source ~/.config/zsh/settings.sh
+[[ ! -f ~/.config/zsh/aliases.sh ]] || source ~/.config/zsh/aliases.sh
+[[ ! -f ~/.config/zsh/functions.sh ]] || source ~/.config/zsh/functions.sh
+[[ ! -f ~/.config/zsh/zplug.zsh ]] || source ~/.config/zsh/zplug.zsh
+[[ ! -f ~/.config/zsh/fzf.zsh ]] || source ~/.config/zsh/fzf.zsh
+[[ ! -f ~/.config/zsh/styles.zsh ]] || source ~/.config/zsh/styles.zsh
+
+# Starship
+eval "$(starship init zsh)"
