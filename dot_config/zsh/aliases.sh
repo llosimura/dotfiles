@@ -20,6 +20,12 @@ alias c='clear'
 # Better path output
 alias path='echo -e ${PATH//:/\\n}'
 
+# Use rlwrap to wrap mysql if present
+if command -v rlwrap &> /dev/null
+then
+  alias mysql='rlwrap mysql'
+fi
+
 # Get public facing IP Address
 alias myip='curl checkip.amazonaws.com'
 
