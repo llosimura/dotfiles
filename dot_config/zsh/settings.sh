@@ -1,5 +1,6 @@
 export PATH=/opt/homebrew/bin:$PATH
 export PATH=/opt/homebrew/sbin:$PATH
+export PATH=/Users/llosimura/.local/bin:$PATH
 
 # Default editor
 # Use neovim as EDITOR present
@@ -33,5 +34,7 @@ fi
 # Turn off autocomplete beeps
 unsetopt LIST_BEEP
 
+eval "$(fnm env --use-on-cd --shell zsh)"
+
 #export SDKMAN_DIR="$HOME/.sdkman"
-#[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
