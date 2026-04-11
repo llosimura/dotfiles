@@ -1,0 +1,5 @@
+.claude/
+.DS_Store
+.idea/
+docs/
+dot_local/share/devbox/global/default/.devbox/
