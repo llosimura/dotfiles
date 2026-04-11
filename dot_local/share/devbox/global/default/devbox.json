@@ -1,0 +1,39 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.13.7/.schema/devbox.schema.json",
+  "packages": [
+    "bat",
+    "delta",
+    "eza",
+    "fd",
+    "fzf",
+    "gh",
+    "go",
+    "htop",
+    "jdk21",
+    "k9s",
+    "kotlin",
+    "kubeseal",
+    "kubectl",
+    "kubernetes-helm",
+    "kustomize",
+    "lazygit",
+    "lua",
+    "luajit",
+    "luarocks",
+    "neovim",
+    "nodejs_22",
+    "python313",
+    "ripgrep",
+    "shellcheck",
+    "shfmt",
+    "starship",
+    "tree-sitter",
+    "wget",
+    "yq-go",
+    "zplug"
+  ],
+  "shell": {
+    "init_hook": [],
+    "scripts": {}
+  }
+}
