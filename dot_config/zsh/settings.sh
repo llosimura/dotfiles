@@ -34,5 +34,8 @@ fi
 # Turn off autocomplete beeps
 unsetopt LIST_BEEP
 
-# Initialize devbox global environment (manages all dev tools and runtimes)
+# Initialize devbox global environment (manages CLI tools)
 eval "$(devbox global shellenv)"
+
+# Initialize mise (manages runtimes: node, python, go, java, kotlin)
+eval "$(mise activate zsh)"
