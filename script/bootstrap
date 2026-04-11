@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+echo "==> Bootstrapping dotfiles..."
+
+# 1. Install Homebrew if missing
+if ! command -v brew &>/dev/null; then
+  echo "==> Installing Homebrew..."
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
+# 2. Install chezmoi if missing
+if ! command -v chezmoi &>/dev/null; then
+  echo "==> Installing chezmoi..."
+  brew install chezmoi
+fi
+
+# 3. Apply chezmoi dotfiles
+echo "==> Applying chezmoi dotfiles..."
+chezmoi apply
+
+# 4. Install devbox if missing
+if ! command -v devbox &>/dev/null; then
+  echo "==> Installing devbox..."
+  curl -fsSL https://get.jetify.com/devbox | bash
+fi
+
+# 5. Install devbox global packages
+echo "==> Installing devbox global packages..."
+devbox global install
+
+# 6. Install Homebrew bundles
+echo "==> Installing Homebrew bundle..."
+brew bundle --file="$(chezmoi source-path)/Brewfile"
+
+echo "==> Bootstrap complete."
