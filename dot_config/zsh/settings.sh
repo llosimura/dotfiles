@@ -34,7 +34,5 @@ fi
 # Turn off autocomplete beeps
 unsetopt LIST_BEEP
 
-eval "$(fnm env --use-on-cd --shell zsh)"
-
 # Initialize devbox global environment (manages all dev tools and runtimes)
 eval "$(devbox global shellenv)"
