@@ -1,0 +1,51 @@
+layout {
+  pane split_direction="vertical" {
+    pane
+  }
+
+  pane size=1 borderless=true {
+    plugin location="file:~/.config/zellij/plugins/zjstatus-v0.22.0.wasm" {
+      hide_frame_for_single_pane false
+      border_enabled false
+      border_char "─"
+      border_format "#[fg=#6C7086]{char}"
+      border_position "top"
+
+      format_left  "{mode}#[fg=#89B4FA,bold] 󰆍 {session}"
+      format_center "{tabs}"
+      format_right "{swap_layout}{datetime}"
+      format_space ""
+
+      mode_normal          "#[fg=#1E1E2E,bg=#89DCEB,bold] NORMAL #[fg=#1E1E2E,bg=#89DCEB] shell "
+      mode_locked          "#[fg=#1E1E2E,bg=#F38BA8,bold] LOCKED #[fg=#1E1E2E,bg=#F38BA8] Ctrl-g "
+      mode_resize          "#[fg=#1E1E2E,bg=#FAB387,bold] RESIZE #[fg=#1E1E2E,bg=#FAB387] hjkl +- "
+      mode_pane            "#[fg=#1E1E2E,bg=#A6E3A1,bold] PANE #[fg=#1E1E2E,bg=#A6E3A1] focus "
+      mode_tab             "#[fg=#1E1E2E,bg=#CBA6F7,bold] TAB #[fg=#1E1E2E,bg=#CBA6F7] switch "
+      mode_scroll          "#[fg=#1E1E2E,bg=#F9E2AF,bold] SCROLL #[fg=#1E1E2E,bg=#F9E2AF] history "
+      mode_enter_search    "#[fg=#1E1E2E,bg=#F5C2E7,bold] SEARCH #[fg=#1E1E2E,bg=#F5C2E7] input "
+      mode_search          "#[fg=#1E1E2E,bg=#F5C2E7,bold] SEARCH #[fg=#1E1E2E,bg=#F5C2E7] next/prev "
+      mode_rename_tab      "#[fg=#1E1E2E,bg=#F5C2E7,bold] RENAME TAB #[fg=#1E1E2E,bg=#F5C2E7] edit "
+      mode_rename_pane     "#[fg=#1E1E2E,bg=#F5C2E7,bold] RENAME PANE #[fg=#1E1E2E,bg=#F5C2E7] edit "
+      mode_session         "#[fg=#CDD6F4,bg=#45475A,bold] SESSION #[fg=#CDD6F4,bg=#45475A] detach "
+      mode_move            "#[fg=#1E1E2E,bg=#FAB387,bold] MOVE #[fg=#1E1E2E,bg=#FAB387] reorder "
+      mode_prompt          "#[fg=#1E1E2E,bg=#89DCEB,bold] PROMPT #[fg=#1E1E2E,bg=#89DCEB] confirm "
+      mode_tmux            "#[fg=#1E1E2E,bg=#FAB387,bold] TMUX #[fg=#1E1E2E,bg=#FAB387] prefix "
+      mode_default_to_mode "normal"
+
+      tab_normal               "#[fg=#6C7086,bold] {index} #[fg=#6C7086] {name}{fullscreen_indicator}{sync_indicator}{floating_indicator}"
+      tab_active               "#[fg=#89B4FA,bold] {index} #[fg=#CDD6F4,bold,italic] {name}{fullscreen_indicator}{sync_indicator}{floating_indicator}"
+      tab_separator            "#[fg=#45475A]  │  "
+      tab_rename               "#[fg=#FAB387,bold] {index} #[fg=#CDD6F4,bold] {name}{floating_indicator}"
+      tab_fullscreen_indicator " □"
+      tab_sync_indicator       " <>"
+      tab_floating_indicator   " 󰉈"
+
+      swap_layout_format        "#[fg=#6C7086,bold] {name} #[fg=#45475A]│ "
+      swap_layout_hide_if_empty "true"
+
+      datetime          "#[fg=#9399B2] {format} "
+      datetime_format   "%A, %d %b %Y %H:%M"
+      datetime_timezone "America/New_York"
+    }
+  }
+}

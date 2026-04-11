@@ -34,7 +34,16 @@ devbox global install
 echo "==> Installing Homebrew bundle..."
 brew bundle --file="$(chezmoi source-path)/Brewfile"
 
-# 7. Install yazi plugins
+# 7. Install zellij plugins
+echo "==> Installing zellij plugins..."
+ZELLIJ_PLUGINS_DIR="$HOME/.config/zellij/plugins"
+mkdir -p "$ZELLIJ_PLUGINS_DIR"
+curl -L "https://github.com/rvcas/room/releases/latest/download/room.wasm" -o "$ZELLIJ_PLUGINS_DIR/room.wasm"
+curl -L "https://github.com/karimould/zellij-forgot/releases/latest/download/zellij_forgot.wasm" -o "$ZELLIJ_PLUGINS_DIR/zellij_forgot.wasm"
+curl -L "https://github.com/dj95/zjstatus/releases/latest/download/zjstatus.wasm" -o "$ZELLIJ_PLUGINS_DIR/zjstatus-v0.22.0.wasm"
+curl -L "https://github.com/ndavd/zellij-pane-picker/releases/latest/download/zellij-pane-picker.wasm" -o "$ZELLIJ_PLUGINS_DIR/zellij-pane-picker-v0.6.0.wasm"
+
+# 8. Install yazi plugins
 echo "==> Installing yazi plugins..."
 ya pkg install
 
