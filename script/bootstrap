@@ -34,4 +34,8 @@ devbox global install
 echo "==> Installing Homebrew bundle..."
 brew bundle --file="$(chezmoi source-path)/Brewfile"
 
+# 7. Install yazi plugins
+echo "==> Installing yazi plugins..."
+ya pkg install
+
 echo "==> Bootstrap complete."
