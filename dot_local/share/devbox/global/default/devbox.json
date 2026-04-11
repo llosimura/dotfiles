@@ -9,9 +9,9 @@
     "gh@2.89.0",
     "htop@3.4.1",
     "k9s@0.50.18",
-    "kubeseal@0.36.0",
     "kubectl@1.35.3",
     "kubernetes-helm@3.19.1",
+    "kubeseal@0.36.0",
     "kustomize@5.8.1",
     "lazygit@0.61.0",
     "lua@5.2.4",
@@ -30,6 +30,6 @@
   ],
   "shell": {
     "init_hook": [],
-    "scripts":   {}
+    "scripts": {}
   }
 }
