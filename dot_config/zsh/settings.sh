@@ -36,5 +36,5 @@ unsetopt LIST_BEEP
 
 eval "$(fnm env --use-on-cd --shell zsh)"
 
-#export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+# Initialize devbox global environment (manages all dev tools and runtimes)
+eval "$(devbox global shellenv)"
