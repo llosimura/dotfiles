@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+DEVBOX_CONFIG="$HOME/.local/share/devbox/global/default"
+
+echo "==> Sorting packages in devbox.json..."
+# Sort the packages array alphabetically using jq
+jq '.packages |= sort' "$DEVBOX_CONFIG/devbox.json" > /tmp/devbox.json.sorted
+mv /tmp/devbox.json.sorted "$DEVBOX_CONFIG/devbox.json"
+
+echo "==> Importing devbox.json and devbox.lock into chezmoi..."
+chezmoi add "$DEVBOX_CONFIG/devbox.json"
+chezmoi add "$DEVBOX_CONFIG/devbox.lock"
+
+echo "==> Done. Review changes with: chezmoi diff"
