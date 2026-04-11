@@ -1,10 +1,17 @@
 layout {
+  cwd "."
+
   pane split_direction="vertical" {
-    pane
+    pane command="yazi" close_on_exit=false size="20%"
+    pane split_direction="horizontal" size="60%" {
+      pane size="75%"
+      pane size="25%"
+    }
+    pane command="lazygit" close_on_exit=false size="20%"
   }
 
   pane size=1 borderless=true {
-    plugin location="file:~/.config/zellij/plugins/zjstatus-v0.22.0.wasm" {
+    plugin location="file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/zjstatus-v0.22.0.wasm" {
       hide_frame_for_single_pane false
       border_enabled false
       border_char "─"

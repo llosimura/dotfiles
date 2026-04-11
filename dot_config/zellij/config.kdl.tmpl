@@ -168,13 +168,13 @@ keybinds {
     bind "Alt [" { PreviousSwapLayout; }
     bind "Alt ]" { NextSwapLayout; }
     bind "Ctrl f" {
-      LaunchOrFocusPlugin "file:~/.config/zellij/plugins/zellij_forgot.wasm" {
+      LaunchOrFocusPlugin "file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/zellij_forgot.wasm" {
         "LOAD_ZELLIJ_BINDINGS" "true"
         floating true
       }
     }
     bind "Ctrl y" {
-      LaunchOrFocusPlugin "file:~/.config/zellij/plugins/room.wasm" {
+      LaunchOrFocusPlugin "file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/room.wasm" {
         floating true
         ignore_case true
         quick_jump true
@@ -232,7 +232,7 @@ plugins {
   configuration location="zellij:configuration"
   plugin-manager location="zellij:plugin-manager"
   about location="zellij:about"
-  zellij-pane-picker location="file:~/.config/zellij/plugins/zellij-pane-picker-v0.6.0.wasm" {
+  zellij-pane-picker location="file:{{ .chezmoi.homeDir }}/.config/zellij/plugins/zellij-pane-picker-v0.6.0.wasm" {
     list_panes "Alt y"
     navigate_back "Alt u"
     toggle_star "Alt s"
