@@ -1,5 +1,5 @@
 # shellcheck disable=SC1090
-source ~/.zplug/init.zsh
+source "$DEVBOX_PACKAGES_DIR/share/zplug/init.zsh"
 
 # Plugins
 zplug "Aloxaf/fzf-tab", from:github
